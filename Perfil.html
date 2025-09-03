@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil do Usuário</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .profile-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 2px solid #ccc;
+    }
+
+    .form-group {
+      margin: 15px 0;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    #upload-photo {
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-container">
+    <h2>Meu Perfil</h2>
+    
+    <!-- Foto de perfil -->
+    <img id="profileImage" src="https://via.placeholder.com/100" alt="Foto de perfil" class="profile-pic" />
+    <br/>
+    <input type="file" id="upload-photo" accept="image/*" onchange="carregarFoto()" />
+
+    <!-- Campos do formulário -->
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" placeholder="Seu nome completo" />
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" placeholder="Seu e-mail" />
+    </div>
+    <div class="form-group">
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" placeholder="Seu CPF" />
+    </div>
+
+    <button onclick="salvarPerfil()">modificar</button>
+  </div>
+  <button><a href="C:\Users\Adm\Documents\Hackthon lagarto\Cadastro_carrona.html">Cadastrar carona</a></button>
+  <button><a href="C:\Users\Adm\Documents\Hackthon lagarto\Filtro.html">Procurar carona</a></button>
+
+
+  <script>
+    function carregarFoto() {
+      const input = document.getElementById("upload-photo");
+      const img = document.getElementById("profileImage");
+
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          img.src = e.target.result;
+        };
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    function salvarPerfil() {
+      const nome = document.getElementById("nome").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const cpf = document.getElementById("cpf").value.trim();
+
+      if (!nome || !email || !cpf) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+      }
+
+      alert("Perfil salvo com sucesso!");
+      // Aqui você poderia enviar os dados para um servidor ou salvar no localStorage
+    }
+  </script>
+
+</body>
+</html>

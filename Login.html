@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .form-button {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .form-button button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-button button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <div class="form-group">
+      <label for="userId">ID do Usuário:</label>
+      <input type="text" id="userId" placeholder="Digite seu ID" />
+    </div>
+    <div class="form-group">
+      <label for="password">Senha:</label>
+      <input type="password" id="password" placeholder="Digite sua senha" />
+    </div>
+    <div class="form-button">
+      <button onclick="login()"><a href="C:\Users\Adm\Documents\Hackthon lagarto\Perfil.html">Entrar</a></button>
+    </div>
+    <div style="text-align: center; margin-top: 15px;">
+        <p>Não tem uma conta? <a href="C:\Users\Adm\Documents\Hackthon lagarto\Cadastro.html">Cadastre-se aqui</a></p>
+    </div>
+      
+  </div>
+
+  <script>
+    function login() {
+      const userId = document.getElementById("userId").value;
+      const password = document.getElementById("password").value;
+
+      // Aqui você pode fazer validações ou envio para backend
+      if (userId === "" || password === "") {
+        alert("Por favor, preencha todos os campos.");
+        return;
+      }
+
+      // Exemplo de login fictício
+      if (userId === "admin" && password === "1234") {
+        alert("Login bem-sucedido!");
+        // Redirecionar ou continuar
+      } else {
+        alert("ID ou senha incorretos.");
+      }
+    }
+  </script>
+
+</body>
+</html>
