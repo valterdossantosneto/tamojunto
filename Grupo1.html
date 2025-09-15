@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Participantes do Grupo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+    }
+
+    .lista {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .participante {
+      background: white;
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .participante img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #4285f4;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .info h4 {
+      margin: 0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .info p {
+      margin: 2px 0;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <button>Sair</button>
+  <div class="lista">
+    <div class="participante">
+      <a href="Perfil_user_1.html">
+        <img src="imeges/man.png" alt="Foto João">
+        <div class="info">
+          <h4>João Silva</h4>
+          <p>Universidade Federal de Sergipe</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="participante">
+      <img src="imeges/woman.png" alt="Foto Maria">
+      <div class="info">
+        <h4>Maria Oliveira</h4>
+        <p>Instituto Federal de Sergipe</p>
+      </div>
+    </div>
+
+    <div class="participante">
+      <img src="imeges/man.png" alt="Foto Carlos">
+      <div class="info">
+        <h4>Carlos Souza</h4>
+        <p>Universidade Tiradentes</p>
+      </div>
+    </div>
+
+    <div class="participante">
+      <img src="imeges/woman.png" alt="Foto Ana">
+      <div class="info">
+        <h4>Ana Costa</h4>
+        <p>Universidade Estácio</p>
+      </div>
+    </div>
+
+    <div class="participante">
+      <img src="imeges/man.png" alt="Foto Pedro">
+      <div class="info">
+        <h4>Pedro Santos</h4>
+        <p>Instituto Federal Baiano</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

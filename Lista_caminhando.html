@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+    }
+
+    .bloco {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #4285f4;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .info h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .info p {
+      margin: 3px 0;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .card button {
+      background: #4285f4;
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .card button:hover {
+      background: #3367d6;
+    }
+  </style>
+</head>
+<body>
+  <div class="bloco">
+    <div class="card">
+      <img src="imeges/man.png" alt="Foto perfil">
+      <div class="info">
+        <h3>João Silva</h3>
+        <p>Universidade Federal de Sergipe</p>
+        <p>Ponto de encontro: Bicilcetário do ifs</p>
+        <p>Rota: link no maps</p>
+        <p>horário de saida: 18:00</p>
+      </div>
+      <button onclick="alert('Entrou no grupo de João!')">Entrar</button>
+    </div>
+
+    <div class="card">
+      <img src="imeges/woman.png" alt="Foto perfil">
+      <div class="info">
+        <h3>Maria Oliveira</h3>
+        <p>Instituto Federal de Sergipe</p>
+      </div>
+      <a href="Grupo1.html">
+        <button onclick="alert('Entrou no grupo de Maria!')">Entrar</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="imeges/man.png" alt="Foto perfil">
+      <div class="info">
+        <h3>Carlos Souza</h3>
+        <p>Universidade Tiradentes</p>
+      </div>
+      <button onclick="alert('Entrou no grupo de Carlos!')">Entrar</button>
+    </div>
+  </div>
+</body>
+</html>
