@@ -26,8 +26,9 @@
 
     .imagens {
       display: flex;
-      gap: 20px; /* Espaço entre os botões */
+      gap: 20px;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     .botao {
@@ -40,6 +41,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 120px;
+      height: 120px;
     }
 
     .botao:hover {
@@ -48,8 +51,18 @@
     }
 
     .botao img {
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
+      margin: 0 3px;
+    }
+
+    a {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
@@ -57,24 +70,30 @@
   <div class="container">
     <h1>Qual tipo de grupo quer participar?</h1>
     <div class="imagens">
-      <div class="botao" onclick="alert('Você escolheu grupo masculino')">
-        <a href="Filtro.html">
-          <img src="imeges\man.png" alt="representação masculina">
+      <!-- Grupo Masculino -->
+      <div class="botao">
+        <a href="Filtro.html" onclick="alert('Você escolheu grupo masculino')">
+          <img src="imeges/man.png" alt="representação masculina">
         </a>
       </div>
-      <div class="botao" onclick="alert('Você escolheu grupo feminino!')">
-        <a href="Filtro.html">
-          <img src="imeges\woman.png" alt="representação feminina">
+
+      <!-- Grupo Feminino -->
+      <div class="botao">
+        <a href="Filtro.html" onclick="alert('Você escolheu grupo feminino')">
+          <img src="imeges/woman.png" alt="representação feminina">
         </a>
-    </div>
-    </div>
-      <div class="botao" onclick="alert('Você escolheu grupo feminino!')">
-        <a href="Filtro.html">
-          <img src="imeges\woman.png" alt="representação feminina">
-          <img src="imeges\man.png" alt="representação masculina">
+      </div>
+
+      <!-- Grupo Misto -->
+      <div class="botao">
+        <a href="Filtro.html" onclick="alert('Você escolheu grupo misto')">
+          <img src="imeges/man.png" alt="representação masculina">
+          <img src="imeges/woman.png" alt="representação feminina">
         </a>
+      </div>
     </div>
   </div>
 </body>
 </html>
+
 

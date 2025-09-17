@@ -1,17 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Participante</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #6C3FBD; /* Fundo da página */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Centraliza verticalmente */
+    }
+
+    .perfil {
+      background: #9EF19C; /* Fundo do quadro */
+      border-radius: 12px;
+      padding: 20px;
+      width: 320px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .perfil img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 15px;
+      border: 3px solid #4285f4;
+    }
+
+    .perfil h2 {
+      margin: 0;
+      text-align: center;
+      font-size: 20px;
+      color: #222;
+    }
+
+    .perfil p {
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+      margin: 5px 0 15px;
+    }
+
+    .amigos {
+      margin-top: 10px;
+    }
+
+    .amigos h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .amigos ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .amigos li {
+      background: rgba(255, 255, 255, 0.6);
+      margin-bottom: 6px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #111;
+    }
+
+    /* Estilo dos botões */
+    .acoes {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .acoes button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .btn-amigo {
+      background: #4285f4;
+    }
+    .btn-amigo:hover {
+      background: #3367d6;
+    }
+
+    .btn-denuncia {
+      background: #e63946;
+    }
+    .btn-denuncia:hover {
+      background: #c92a3a;
+    }
+  </style>
 </head>
 <body>
-    Foto
-    nome
-    matricula
-    Amigos no grupo:
-    vanessa
-    larissa
-    antonio
+  <div class="perfil">
+    <img src="imeges/user.png" alt="Foto do usuário">
+    <h2>Nome do Usuário</h2>
+    <p>Matrícula: 123456</p>
+
+    <div class="amigos">
+      <h3>Amigos no grupo:</h3>
+      <ul>
+        <li>Vanessa</li>
+        <li>Larissa</li>
+        <li>Antonio</li>
+      </ul>
+    </div>
+
+    <!-- Botões de ação -->
+    <div class="acoes">
+      <button class="btn-amigo">Adicionar Amigo</button>
+      <button class="btn-denuncia">Denunciar</button>
+    </div>
+  </div>
 </body>
 </html>

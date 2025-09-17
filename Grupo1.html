@@ -9,9 +9,12 @@
       margin: 0;
       padding: 20px;
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background: #6C3FBD; /* Fundo roxo */
       display: flex;
       justify-content: center;
+      gap: 30px; /* Espaço entre lista e informações do grupo */
+      min-height: 100vh;
+      align-items: flex-start;
     }
 
     .lista {
@@ -28,7 +31,7 @@
       display: flex;
       align-items: center;
       gap: 15px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
 
     .participante img {
@@ -54,11 +57,131 @@
       font-size: 13px;
       color: #777;
     }
+
+    .criador h4 {
+      color: #4285f4;
+    }
+
+    /* Estilo do quadro de informações do grupo */
+    .grupo-info {
+      width: 300px;
+      background: #9EF19C; /* Verde claro */
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .grupo-info h3 {
+      margin: 0;
+      color: #222;
+    }
+
+    .grupo-info p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .grupo-info button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    /* Botão de sair */
+    .grupo-info .sair {
+      background: #e63946;
+    }
+
+    .grupo-info .sair:hover {
+      background: #c92a3a;
+    }
+
+    /* Botão de excluir */
+    .grupo-info .excluir {
+      background: #000;
+    }
+
+    .grupo-info .excluir:hover {
+      background: #333;
+    }
+
+    /* Select de status */
+    .status-select label {
+      font-size: 14px;
+      color: #222;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .status-select select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #555;
+      font-size: 14px;
+    }
+
+    /* Lista de responsáveis */
+    .responsaveis h4 {
+      margin: 10px 0 6px;
+      font-size: 15px;
+      color: #222;
+    }
+
+    .responsaveis ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .responsaveis li {
+      background: rgba(255,255,255,0.6);
+      margin-bottom: 6px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #111;
+    }
+
+    /* Link Google Maps */
+    .map-link {
+      text-decoration: none;
+      color: #fff;
+      background: #4285f4;
+      padding: 10px;
+      border-radius: 6px;
+      text-align: center;
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .map-link:hover {
+      background: #3367d6;
+    }
   </style>
 </head>
 <body>
-  <button>Sair</button>
+  <!-- Lista de Participantes -->
   <div class="lista">
+
+    <div class="participante criador">
+      <img src="imeges/woman.png" alt="Foto Maria">
+      <div class="info">
+        <h4>Maria Oliveira</h4>
+        <p>Criadora do grupo</p>
+        <p>Instituto Federal de Sergipe</p>
+      </div>
+    </div>
+
     <div class="participante">
       <a href="Perfil_user_1.html">
         <img src="imeges/man.png" alt="Foto João">
@@ -67,14 +190,6 @@
           <p>Universidade Federal de Sergipe</p>
         </div>
       </a>
-    </div>
-
-    <div class="participante">
-      <img src="imeges/woman.png" alt="Foto Maria">
-      <div class="info">
-        <h4>Maria Oliveira</h4>
-        <p>Instituto Federal de Sergipe</p>
-      </div>
     </div>
 
     <div class="participante">
@@ -101,5 +216,45 @@
       </div>
     </div>
   </div>
+
+  <!-- Quadro com informações do grupo -->
+  <div class="grupo-info">
+    <h3>Informações do Grupo</h3>
+    <p><strong>Instituição:</strong> Instituto Federal de Sergipe</p>
+    <p><strong>Local de Saída:</strong> São Cristóvão</p>
+    <p><strong>Local de Chegada:</strong> Aracaju</p>
+
+    <!-- Select de status -->
+    <div class="status-select">
+      <label for="status">Status da Viagem:</label>
+      <select id="status">
+        <option value="ativo">Ativo</option>
+        <option value="saiu">Saiu</option>
+        <option value="atraso">Em atraso</option>
+        <option value="cancelado">Cancelado</option>
+      </select>
+    </div>
+
+    <!-- Lista de responsáveis -->
+    <div class="responsaveis">
+      <h4>Pode alterar status:</h4>
+      <ul>
+        <li>Maria Oliveira</li>
+        <li>Carlos Souza</li>
+        <li>Ana Costa</li>
+      </ul>
+    </div>
+
+    <!-- Link Google Maps -->
+    <a class="map-link" target="_blank"
+      href="https://www.google.com/maps/dir/Instituto+Federal+de+Sergipe+-+Campus+S%C3%A3o+Crist%C3%B3v%C3%A3o/Reitoria+IFS,+Aracaju">
+      Ver rota no Google Maps
+    </a>
+
+    <!-- Botões -->
+    <button class="sair">Sair do Grupo</button>
+    <button class="excluir">Excluir Grupo</button>
+  </div>
 </body>
 </html>
+

@@ -14,23 +14,47 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      flex-direction: column;
     }
 
+    /* Menu superior */
+    nav {
+      width: 100%;
+      background-color: #6C3FBD;
+      padding: 10px 0;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Container de login */
     .login-container {
       background-color: #ffffff;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      width: 300px;
+      width: 320px;
+      margin-top: 20px;
+      text-align: center;
     }
 
     .login-container h2 {
       margin-bottom: 20px;
-      text-align: center;
     }
 
     .form-group {
       margin-bottom: 15px;
+      text-align: left;
     }
 
     .form-group label {
@@ -43,29 +67,55 @@
       width: 100%;
       padding: 8px;
       box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #ccc;
     }
 
     .form-button {
-      display: flex;
-      justify-content: flex-end;
+      margin-top: 10px;
     }
 
     .form-button button {
-      background-color: #4CAF50;
+      width: 100%;
+      background-color: #6C3FBD;
       color: white;
-      padding: 10px 20px;
+      padding: 10px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-size: 16px;
     }
 
     .form-button button:hover {
-      background-color: #45a049;
+      background-color: #54288c;
+    }
+
+    .register-link {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .register-link a {
+      color: #6C3FBD;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
+  <!-- Menu superior -->
+  <nav>
+    <a href="#">Contatos</a>
+    <a href="#">Quem Somos</a>
+    <a href="#">Valores</a>
+  </nav>
+
+  <!-- Container de login -->
   <div class="login-container">
     <h2>Login</h2>
     <div class="form-group">
@@ -77,29 +127,27 @@
       <input type="password" id="password" placeholder="Digite sua senha" />
     </div>
     <div class="form-button">
-      <button onclick="login()"><a href="C:\Users\Adm\Documents\tamojunto\Perfil.html">Entrar</a></button>
+      <button onclick="login()">Entrar</button>
     </div>
-    <div style="text-align: center; margin-top: 15px;">
-        <p>Não tem uma conta? <a href="C:\Users\Adm\Documents\tamojunto\Cadastro.html">Cadastre-se aqui</a></p>
+    <div class="register-link">
+      <p>Não tem uma conta? <a href="Cadastro.html">Cadastre-se aqui</a></p>
     </div>
-      
   </div>
 
   <script>
     function login() {
-      const userId = document.getElementById("userId").value;
-      const password = document.getElementById("password").value;
+      const userId = document.getElementById("userId").value.trim();
+      const password = document.getElementById("password").value.trim();
 
-      // Aqui você pode fazer validações ou envio para backend
-      if (userId === "" || password === "") {
+      if (!userId || !password) {
         alert("Por favor, preencha todos os campos.");
         return;
       }
 
-      // Exemplo de login fictício
+      // Login fictício
       if (userId === "admin" && password === "1234") {
         alert("Login bem-sucedido!");
-        // Redirecionar ou continuar
+        window.location.href = "Perfil.html"; // Redireciona para perfil
       } else {
         alert("ID ou senha incorretos.");
       }
@@ -108,3 +156,4 @@
 
 </body>
 </html>
+
