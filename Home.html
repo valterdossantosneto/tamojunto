@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - Caronas Universitárias</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Menu superior */
+    nav {
+      width: 100%;
+      background-color: #6C3FBD;
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    nav .logo {
+      margin-left: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav .links {
+      margin-right: 20px;
+    }
+
+    nav .links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    nav .links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(to right, #6C3FBD, #54288c);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .hero .btn {
+      background-color: #fff;
+      color: #6C3FBD;
+      padding: 12px 25px;
+      border-radius: 8px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hero .btn:hover {
+      background-color: #ddd;
+    }
+
+    /* Seção de grupos */
+    .groups {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .groups h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .group-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .group-card {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+    }
+
+    .group-card h3 {
+      margin-top: 0;
+      color: #6C3FBD;
+    }
+
+    .group-card p {
+      margin: 5px 0;
+    }
+
+    .group-card button {
+      background-color: #6C3FBD;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .group-card button:hover {
+      background-color: #54288c;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #6C3FBD;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu -->
+  <nav>
+    <div class="logo">UniCarona</div>
+    <div class="links">
+      <a href="Home.html">Home</a>
+      <a href="Cadastro.html">Criar Grupo</a>
+      <a href="C:\Users\Adm\Documents\tamojunto\Login.html">Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Bem-vindo ao UniCarona 🚗🎓</h1>
+    <p>Compartilhe caronas com colegas da universidade e economize tempo e dinheiro.</p>
+    <button class="btn" onclick="window.location.href='Cadastro.html'">Criar Grupo</button>
+    <button class="btn" onclick="alert('Em breve: busca de grupos!')">Procurar Caronas</button>
+  </section>
+
+  <!-- Grupos de carona em destaque -->
+  <section class="groups">
+    <h2>Grupos em Destaque</h2>
+    <div class="group-list">
+      <div class="group-card">
+        <h3>Campus → Centro</h3>
+        <p><b>Horário:</b> 07:30</p>
+        <p><b>Tipo:</b> Carro</p>
+        <button>Entrar no grupo</button>
+      </div>
+      <div class="group-card">
+        <h3>Bairro A → Universidade</h3>
+        <p><b>Horário:</b> 08:00</p>
+        <p><b>Tipo:</b> Bicicleta</p>
+        <button>Entrar no grupo</button>
+      </div>
+      <div class="group-card">
+        <h3>Praça X → Campus</h3>
+        <p><b>Horário:</b> 09:15</p>
+        <p><b>Tipo:</b> Caminhando</p>
+        <button>Entrar no grupo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 UniCarona - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
