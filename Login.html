@@ -13,7 +13,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
     }
 
     /* Menu superior */
@@ -44,8 +44,7 @@
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       width: 320px;
       text-align: center;
-      margin-top: auto;
-      margin-bottom: auto;
+      margin-top: 20px;
     }
 
     .login-container h2 {
@@ -105,6 +104,65 @@
       text-decoration: underline;
     }
 
+    /* Textos centrais e justificados */
+    .text-section {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      text-align: justify;
+    }
+
+    .text-section h3 {
+      text-align: center;
+      color: #6C3FBD;
+      margin-bottom: 15px;
+    }
+
+    /* Formulário de contato */
+    .contact-form {
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 25px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      text-align: justify;
+    }
+
+    .contact-form h3 {
+      text-align: center;
+      color: #6C3FBD;
+      margin-bottom: 20px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .contact-form button {
+      width: 100%;
+      background-color: #6C3FBD;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #54288c;
+    }
+
     /* Quadro de informações */
     .info-box {
       position: absolute;
@@ -118,8 +176,6 @@
       width: 280px;
       font-size: 14px;
       line-height: 1.5;
-
-      /* Corrige quebra de texto */
       word-wrap: break-word;
       overflow-wrap: break-word;
       white-space: normal;
@@ -128,6 +184,7 @@
     .info-box h3 {
       margin-bottom: 10px;
       color: #6C3FBD;
+      text-align: center;
     }
   </style>
 </head>
@@ -159,6 +216,51 @@
     </div>
   </div>
 
+  <!-- Textos informativos centralizados e justificados -->
+  <div class="text-section">
+    <h3>Sobre nós</h3>
+    <p>
+      TamoJunto nasceu de um momento que muitos de nós já vivemos: a sensação de insegurança ao sair da instituição. Eu e meus amigos, ao final das aulas, caminhávamos por ruas mal iluminadas, sempre com aquela preocupação constante por causa do histórico de tentativas de assalto na região. Foi nesse contexto que percebemos algo importante: ninguém deveria se sentir sozinho ou vulnerável ao voltar para casa. A ideia do TamoJunto surgiu desse desejo de transformar medo em cuidado, e insegurança em união. Mais do que um site, o TamoJunto é um movimento para que possamos caminhar juntos, nos apoiar e construir um ambiente mais seguro para todos.
+    </p>
+  </div>
+
+  <div class="text-section">
+    <h3>Como funciona</h3>
+    <p>
+      O estudante se cadastra usando o e-mail acadêmico e recebe a confirmação da conta por e-mail. A partir daí, pode criar seus próprios grupos ou entrar em grupos já existentes, conectando-se a outros estudantes de forma prática e segura.
+    </p>
+  </div>
+
+  <div class="text-section">
+    <h3>Tipos de grupos</h3>
+    <p>
+      <strong>Grupos de caminhada:</strong> junte-se a outros estudantes para ir juntos até o ponto de ônibus ou para outras localidades, trazendo mais segurança e companhia no trajeto.<br>
+      <strong>Grupos de bicicleta:</strong> organize pedaladas em conjunto, tornando o percurso mais seguro, saudável e divertido.<br>
+      <strong>Grupos de carona:</strong> combine caronas de carro, compartilhe o percurso e divida o valor da gasolina, deixando o deslocamento mais econômico e sustentável.
+    </p>
+  </div>
+
+  <!-- Formulário de contato centralizado -->
+  <div class="contact-form">
+    <h3>Entre em contato</h3>
+    <form action="https://formsubmit.co/seuemail@dominio.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+      <input type="hidden" name="_cc" value="{email}">
+
+      <label for="email">Seu e-mail acadêmico:</label>
+      <input type="email" name="email" required>
+
+      <label for="assunto">Assunto:</label>
+      <input type="text" name="subject" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
   <!-- Quadro de informações -->
   <div class="info-box">
     <h3>Bem-vindo!</h3>
@@ -183,19 +285,17 @@
         return;
       }
 
-      // Lista de usuários válidos com rotas específicas
       const usuarios = [
         { id: "admin", senha: "1234", rota: "Perfil.html" },
-        { id: "marcos.neto312@academico.ifs.edu.br", senha: "1022", rota: "PerfilMarcos.html" },
-        { id: "maria.braga125@academico.ifs.edu.br", senha: "1023", rota: "PerfilMaria.html" }
+        { id: "marcos.neto312@academico.ifs.edu.br", senha: "1022", rota: "Perfilmasc.html" },
+        { id: "maria.braga125@academico.ifs.edu.br", senha: "1023", rota: "Perfil.html" }
       ];
 
-      // Verifica se o usuário existe
       const usuarioValido = usuarios.find(u => u.id === userId && u.senha === password);
 
       if (usuarioValido) {
         alert("Login bem-sucedido!");
-        window.location.href = usuarioValido.rota; // Redireciona para o caminho específico
+        window.location.href = usuarioValido.rota;
       } else {
         alert("ID ou senha incorretos.");
       }
@@ -204,6 +304,7 @@
 
 </body>
 </html>
+
 
 
 
