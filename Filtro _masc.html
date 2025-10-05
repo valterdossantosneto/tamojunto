@@ -13,7 +13,7 @@
       justify-content: center;
       align-items: center;
       font-family: Arial, sans-serif;
-      background: #6C3FBD;
+      background: #f0f0f0;
     }
 
     .container {
@@ -26,13 +26,12 @@
 
     .imagens {
       display: flex;
-      gap: 20px;
+      gap: 20px; /* Espaço entre os botões */
       justify-content: center;
-      flex-wrap: wrap;
     }
 
     .botao {
-      border: 2px solid #C3C3C3;
+      border: 2px solid #4285f4;
       border-radius: 12px;
       padding: 10px;
       background: white;
@@ -41,8 +40,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 120px;
-      height: 120px;
     }
 
     .botao:hover {
@@ -51,18 +48,8 @@
     }
 
     .botao img {
-      width: 60px;
-      height: 60px;
-      margin: 0 3px;
-    }
-
-    a {
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
+      width: 80px;
+      height: 80px;
     }
   </style>
 </head>
@@ -70,24 +57,22 @@
   <div class="container">
     <h1>Qual tipo de grupo quer participar?</h1>
     <div class="imagens">
-
-      <!-- Grupo Feminino -->
-      <div class="botao">
-        <a href="Filtro _femi.html" onclick="alert('Você escolheu grupo feminino')">
-          <img src="imeges/woman.png" alt="representação feminina">
+      <div class="botao" onclick="alert('Você escolheu Andar 🚶')">
+        <a href="Lista_masc.html">
+        <img src="imeges/andar.png" alt="Andar"></a>
+      </div>
+      <div class="botao" onclick="alert('Você escolheu Bicicleta 🚴')">
+        <a href="Lista_masc.html">
+          <img src="imeges/andar-de-bicicleta.png" alt="Bicicleta">
         </a>
       </div>
-
-      <!-- Grupo Misto -->
-      <div class="botao">
-        <a href="Lista_bigen.html" onclick="alert('Você escolheu grupo misto')">
-          <img src="imeges/man.png" alt="representação masculina">
-          <img src="imeges/woman.png" alt="representação feminina">
+      <div class="botao" onclick="alert('Você escolheu Carro 🚗')">
+        <a href="Lista_masc.html">
+          <img src="imeges/carro-esportivo.png" alt="Carro">
         </a>
       </div>
     </div>
   </div>
 </body>
 </html>
-
 

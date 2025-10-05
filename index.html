@@ -6,10 +6,10 @@
   <title>Login</title>
   <style>
     body {
-      margin: 0;
+      margin: 20px 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
+      background-color: #54288c;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -42,9 +42,10 @@
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      width: 320px;
+      width: 90%;
+      max-width: 320px;
       text-align: center;
-      margin-top: 20px;
+      margin: 30px auto;
     }
 
     .login-container h2 {
@@ -124,7 +125,7 @@
     /* Formulário de contato */
     .contact-form {
       max-width: 500px;
-      margin: 20px auto;
+      margin: 20px auto 40px;
       padding: 25px;
       background-color: #fff;
       border-radius: 10px;
@@ -167,13 +168,13 @@
     .info-box {
       position: absolute;
       right: 10%;
-      top: 50%;
+      top: 40%;
       transform: translateY(-50%);
       background-color: #ffffff;
-      padding: 20px;
+      padding: 10px;
       border-radius: 10px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      width: 280px;
+      width: 215px;
       font-size: 14px;
       line-height: 1.5;
       word-wrap: break-word;
@@ -186,16 +187,49 @@
       color: #6C3FBD;
       text-align: center;
     }
+
+    /* === Responsividade === */
+    @media (max-width: 768px) {
+      body {
+        margin: 10px 0;
+      }
+
+      .login-container {
+        margin-top: 40px;
+        width: 90%;
+      }
+
+      .info-box {
+        position: static;
+        transform: none;
+        width: 90%;
+        margin: 20px auto;
+      }
+
+      .text-section, .contact-form {
+        width: 90%;
+        margin: 20px auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 20px;
+      }
+
+      .form-button button {
+        font-size: 15px;
+        padding: 8px;
+      }
+
+      .info-box {
+        font-size: 13px;
+        padding: 8px;
+      }
+    }
   </style>
 </head>
 <body>
-
-  <!-- Menu superior -->
-  <nav>
-    <a href="#">Contatos</a>
-    <a href="#">Quem Somos</a>
-    <a href="#">Valores</a>
-  </nav>
 
   <!-- Container de login -->
   <div class="login-container">
@@ -216,11 +250,11 @@
     </div>
   </div>
 
-  <!-- Textos informativos centralizados e justificados -->
+  <!-- Textos informativos -->
   <div class="text-section">
     <h3>Sobre nós</h3>
     <p>
-      TamoJunto nasceu de um momento que muitos de nós já vivemos: a sensação de insegurança ao sair da instituição. Eu e meus amigos, ao final das aulas, caminhávamos por ruas mal iluminadas, sempre com aquela preocupação constante por causa do histórico de tentativas de assalto na região. Foi nesse contexto que percebemos algo importante: ninguém deveria se sentir sozinho ou vulnerável ao voltar para casa. A ideia do TamoJunto surgiu desse desejo de transformar medo em cuidado, e insegurança em união. Mais do que um site, o TamoJunto é um movimento para que possamos caminhar juntos, nos apoiar e construir um ambiente mais seguro para todos.
+      TamoJunto nasceu de um momento que muitos de nós já vivemos: a sensação de insegurança ao sair da instituição. Eu e meus amigos, ao final das aulas, caminhávamos por ruas mal iluminadas, sempre com aquela preocupação constante por causa do histórico de tentativas de assalto na região. Foi nesse contexto que percebemos algo importante: ninguém deveria se sentir sozinho ou vulnerável ao voltar para casa. A ideia do TamoJunto surgiu desse desejo de transformar medo em cuidado, e insegurança em união.
     </p>
   </div>
 
@@ -234,19 +268,18 @@
   <div class="text-section">
     <h3>Tipos de grupos</h3>
     <p>
-      <strong>Grupos de caminhada:</strong> junte-se a outros estudantes para ir juntos até o ponto de ônibus ou para outras localidades, trazendo mais segurança e companhia no trajeto.<br>
-      <strong>Grupos de bicicleta:</strong> organize pedaladas em conjunto, tornando o percurso mais seguro, saudável e divertido.<br>
-      <strong>Grupos de carona:</strong> combine caronas de carro, compartilhe o percurso e divida o valor da gasolina, deixando o deslocamento mais econômico e sustentável.
+      <strong>Grupos de caminhada:</strong> junte-se a outros estudantes para ir juntos até o ponto de ônibus ou para outras localidades.<br>
+      <strong>Grupos de bicicleta:</strong> organize pedaladas em conjunto, tornando o percurso mais seguro e divertido.<br>
+      <strong>Grupos de carona:</strong> combine caronas de carro, compartilhe o percurso e divida o valor da gasolina.
     </p>
   </div>
 
-  <!-- Formulário de contato centralizado -->
+  <!-- Formulário de contato -->
   <div class="contact-form">
     <h3>Entre em contato</h3>
     <form action="https://formsubmit.co/seuemail@dominio.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
-      <input type="hidden" name="_cc" value="{email}">
 
       <label for="email">Seu e-mail acadêmico:</label>
       <input type="email" name="email" required>
@@ -267,10 +300,10 @@
     <p>
       Acesse com uma dessas contas: <br><br>
       <strong>Masculino</strong><br>
-      ID: marcos.neto312@academico.ifs.edu.br <br>
+      ID: marcos@academico.ifs.edu.br <br>
       Senha: 1022 <br><br>
       <strong>Feminino</strong><br>
-      ID: maria.braga125@academico.ifs.edu.br <br>
+      ID: maria@academico.ifs.edu.br <br>
       Senha: 1023
     </p>
   </div>
@@ -287,8 +320,8 @@
 
       const usuarios = [
         { id: "admin", senha: "1234", rota: "Perfil.html" },
-        { id: "marcos.neto312@academico.ifs.edu.br", senha: "1022", rota: "Perfilmasc.html" },
-        { id: "maria.braga125@academico.ifs.edu.br", senha: "1023", rota: "Perfil.html" }
+        { id: "marcos@academico.ifs.edu.br", senha: "1022", rota: "Perfilmasc.html" },
+        { id: "maria@academico.ifs.edu.br", senha: "1023", rota: "Perfil.html" }
       ];
 
       const usuarioValido = usuarios.find(u => u.id === userId && u.senha === password);
@@ -304,8 +337,3 @@
 
 </body>
 </html>
-
-
-
-
-

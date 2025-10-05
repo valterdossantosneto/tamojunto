@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
+      background-color: #6C3FBD;
       margin: 0;
       padding: 0;
       display: flex;
@@ -69,7 +69,7 @@
     }
 
     button {
-      background-color: #007BFF;
+      background-color: #6C3FBD;
       color: white;
       padding: 10px 20px;
       border: none;
@@ -81,7 +81,7 @@
     }
 
     button:hover {
-      background-color: #0056b3;
+      background-color: #553194;
     }
 
     .btn-group {
@@ -96,7 +96,6 @@
       text-decoration: none;
       color: white;
       display: inline-block;
-      width: 100%;
       text-align: center;
     }
 
@@ -112,30 +111,30 @@
     <h2>Meu Perfil</h2>
     
     <!-- Foto de perfil -->
-    <img id="profileImage" src="imeges\foto_perf01.png" alt="Foto de perfil" class="profile-pic" />
+    <img id="profileImage" src="imeges\foto_perf06.png" alt="Foto de perfil" class="profile-pic" />
     <br/>
-    <img id="profileImage" src="imeges\adicionar.png" alt="nova foto" class="profile-pic2" />
     <!-- Campos do formulário -->
     <div class="form-group">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" placeholder="Seu nome completo" />
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" value="Maria Aparecida Dos Santos" disabled />
+    </div>
+    <div class="form-group">
+      <label for="nome">Gênero:</label>
+      <input type="text" id="nome" value="Feminino" disabled/>
     </div>
     <div class="form-group">
       <label for="email">E-mail acadêmico:</label>
-      <input type="email" id="email" placeholder="Seu e-mail" />
+      <input type="email" id="email" value="maria@academico.ifs.edu.br" disabled />
     </div>
     <div class="form-group">
       <label for="cpf">Instituição:</label>
-      <input type="text" id="cpf" placeholder="Sua instituição" />
+      <input type="text" id="instituicao" value="IFS - Instituto Federal De Sergipe" disabled />
     </div>
-
-    <button onclick="salvarPerfil()">Salvar Perfil</button>
-  </div>
-
-  <!-- Botões de ações -->
-  <div class="btn-group">
-    <a href="Cadastro_carrona.html"><button>Cadastrar Carona</button></a>
-    <a href="Filtro_gen.html"><button>Procurar Carona</button></a>
+    <!-- Botões de ações -->
+    <div class="btn-group">
+      <a href="Cadastro_carrona.html"><button>Cadastrar Carona</button></a>
+      <a href="Filtro_gen.html"><button>Procurar Carona</button></a>
+    </div>
   </div>
 
   <script>

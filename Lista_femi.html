@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 0; /* margem em cima e embaixo */
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background: #6C3FBD;
+    }
+
+    .bloco {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #6C3FBD;
+      flex-shrink: 0;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .info h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .info p {
+      margin: 3px 0;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .status {
+      font-weight: bold;
+    }
+
+    .ativo { color: green; }
+    .atrasado { color: orange; }
+    .cancelado { color: red; }
+
+    .card button {
+      background: #6C3FBD;
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      white-space: nowrap;
+    }
+
+    .card button:hover {
+      background: #3367d6;
+    }
+
+    .card a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="bloco">
+    <div class="card">
+      <img src="imeges\foto_perf06.png" alt="Foto perfil">
+      <div class="info">
+        <h3>Maria Aparecida</h3>
+        <p>Universidade Federal de Sergipe</p>
+        <p>Ponto de encontro: Bicicletário do IFS</p>
+        <p>Rota: <a href="https://www.google.com/maps/dir/Instituto+Federal+de+Sergipe/Reitoria+IFS" target="_blank">Abrir no Maps</a></p>
+        <p>Horário de saída: 18:00</p>
+        <p class="status ativo">Status: Ativo</p>
+        <a href="Grupo_femi.html">
+          <button>Entrar</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imeges\foto_perf03.png" alt="Foto perfil">
+      <div class="info">
+        <h3>Fernanda Neves</h3>
+        <p>Universidade Federal de Sergipe</p>
+        <p>Ponto de encontro: Bicicletário do IFS</p>
+        <p>Rota: <a href="https://www.google.com/maps/dir/Instituto+Federal+de+Sergipe/Reitoria+IFS" target="_blank">Abrir no Maps</a></p>
+        <p>Horário de saída: 18:00</p>
+        <p class="status atrasado">Status: Atrasado</p>
+        <a href="Grupo_femi.html">
+          <button>Entrar</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imeges\foto_perf04.png" alt="Foto perfil">
+      <div class="info">
+        <h3>Ludimila Moreira</h3>
+        <p>Universidade Federal de Sergipe</p>
+        <p>Ponto de encontro: Bicicletário do IFS</p>
+        <p>Rota: <a href="https://www.google.com/maps/dir/Instituto+Federal+de+Sergipe/Reitoria+IFS" target="_blank">Abrir no Maps</a></p>
+        <p>Horário de saída: 17:00</p>
+        <p class="status cancelado">Status: Cancelado</p>
+        <a href="Grupo_femi.html">
+          <button>Entrar</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
