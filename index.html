@@ -139,14 +139,26 @@
       margin-bottom: 20px;
     }
 
-    .contact-form input, .contact-form textarea {
+    .contact-form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
       padding: 10px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 14px;
       box-sizing: border-box;
+    }
+
+    .contact-form input[type="email"] {
+      margin-bottom: 10px; /* 🔧 reduzido o espaço abaixo do e-mail */
     }
 
     .contact-form button {
@@ -171,39 +183,68 @@
       top: 40%;
       transform: translateY(-50%);
       background-color: #ffffff;
-      padding: 10px;
+      padding: 12px 15px;
       border-radius: 10px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       width: 215px;
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 1.4;
       word-wrap: break-word;
       overflow-wrap: break-word;
       white-space: normal;
     }
 
     .info-box h3 {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       color: #6C3FBD;
       text-align: center;
+    }
+
+    .info-box p {
+      margin-bottom: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .user-info {
+      background: #f8f8f8;
+      padding: 8px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      font-size: 13.5px;
+    }
+
+    .user-info strong {
+      color: #6C3FBD;
+    }
+
+    .user-info span {
+      word-break: break-all;
+      font-weight: normal;
+      color: #333;
     }
 
     /* === Responsividade === */
     @media (max-width: 768px) {
       body {
         margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
-      .login-container {
-        margin-top: 40px;
-        width: 90%;
-      }
-
+      /* Reorganiza a ordem dos blocos no mobile */
       .info-box {
+        order: -1; /* Faz o quadro de informações vir antes do login */
         position: static;
         transform: none;
         width: 90%;
         margin: 20px auto;
+      }
+
+      .login-container {
+        margin-top: 20px;
+        width: 90%;
       }
 
       .text-section, .contact-form {
@@ -230,6 +271,22 @@
   </style>
 </head>
 <body>
+
+  <!-- Quadro de informações -->
+  <div class="info-box">
+    <h3>Bem-vindo!</h3>
+    <p>Acesse com uma dessas contas:</p>
+    <div class="user-info">
+      <strong>Masculino:</strong><br>
+      ID: <span>marcos@academico.ifs.edu.br</span><br>
+      Senha: 1022
+    </div>
+    <div class="user-info">
+      <strong>Feminino:</strong><br>
+      ID: <span>maria@academico.ifs.edu.br</span><br>
+      Senha: 1023
+    </div>
+  </div>
 
   <!-- Container de login -->
   <div class="login-container">
@@ -292,20 +349,6 @@
 
       <button type="submit">Enviar</button>
     </form>
-  </div>
-
-  <!-- Quadro de informações -->
-  <div class="info-box">
-    <h3>Bem-vindo!</h3>
-    <p>
-      Acesse com uma dessas contas: <br><br>
-      <strong>Masculino</strong><br>
-      ID: marcos@academico.ifs.edu.br <br>
-      Senha: 1022 <br><br>
-      <strong>Feminino</strong><br>
-      ID: maria@academico.ifs.edu.br <br>
-      Senha: 1023
-    </p>
   </div>
 
   <script>
